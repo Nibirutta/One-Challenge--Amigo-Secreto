@@ -2,6 +2,8 @@
 
 ***
 
+### Descrição do projeto  
+
 #### Aqui lhes apresento o desafio proposto pelo curso Oracle Alura, onde devemos elaborar a lógica por trás de um sorteio entre amigos, sendo que o método utilizado para escolha tem que ser completamente aleatório.
 
 ***
@@ -14,3 +16,10 @@
 
 ***
 
+### Ferramentas utilizadas
+
+***
+
+### Como utilizar
+
+![](C:\Users\lucas\OneDrive\Documentos\Visual Code Projects\One-Challenge--Secret-Friend\assets\Video_250128103649.gif)
