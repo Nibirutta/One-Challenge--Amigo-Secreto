@@ -18,8 +18,16 @@
 
 ### Ferramentas utilizadas
 
+* JS
+* CSS
+* HTML
+
 ***
 
 ### Como utilizar
 
-![](C:\Users\lucas\OneDrive\Documentos\Visual Code Projects\One-Challenge--Secret-Friend\assets\Video_250128103649.gif)
+![](assets\Video_250128103649.gif)
+
+### Links úteis
+
+* https://nibirutta.github.io/One-Challenge--Amigo-Secreto/
