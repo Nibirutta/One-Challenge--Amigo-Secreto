@@ -25,3 +25,13 @@ function atualizarListaAmigos(){
         lista.appendChild(item);
     }
 }
+
+function sortearAmigo(){
+    if(amigos.length == 0){
+        alert("Adicione pelo menos um amigo!");
+    } else {
+        amigoSorteado = document.getElementById("resultado");
+
+        amigoSorteado.innerHTML = amigos[Math.floor(Math.random() * amigos.length)] + " é o seu amigo secreto!";
+    }
+}
