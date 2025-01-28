@@ -8,9 +8,9 @@
 
 ### Funcionalidades
 
-[x] Sorteio completamente aleatório.  
-[x] Cadastro ilimitado de amigos.  
-[x] Acompanhamento da lista e do total de amigos cadastrados.
+- [x] Sorteio completamente aleatório.  
+- [x] Cadastro ilimitado de amigos.  
+- [x] Acompanhamento da lista e do total de amigos cadastrados.
 
 ***
 
