@@ -26,7 +26,7 @@
 
 ### Como utilizar
 
-![](assets\Video_250128103649.gif)
+![](assets/Video_250128103649.gif)
 
 ### Links úteis
 
