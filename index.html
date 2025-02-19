@@ -28,11 +28,15 @@
                 <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
                 <ul id="resultado" class="result-list" aria-live="polite"></ul>
             </div>
-            <div class="button-container">
+            <div class="output-container">
                 <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
                     <img src="assets/play_circle_outline.png" alt="Ícone para sortear">
-                    Sortear amigo
+                    <p>Sortear amigo</p>
                 </button>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="repeat-checkbox" onclick="toggleRepeat()" aria-label="Permitir repetição de amigos">
+                    <label for="repeat-check-box">Repetir amigos?</label>
+                </div>
             </div>
         </section>
     </main>
