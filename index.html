@@ -13,9 +13,14 @@
 <body>
     <main class="main-content">
         <header class="header-banner">
-            <h1 class="main-title">Amigo Secreto</h1>
-            <img src="assets/amigo-secreto.png" alt="Imagem representativa de amigo secreto">
+            <h1 class="main-title">Dê a melhor surpresa para o seu amigo secreto!</h1>
+            <img src="assets/logo-jogo-secreto.png" alt="Imagem representativa de amigo secreto">
         </header>
+
+        <div>
+            <img src="assets/confettieffectnoloop.gif" alt="confetti gif" id="confetti-gif-right" class="confetti-gif">
+            <img src="assets/confettieffectnoloop.gif" alt="confetti gif" id="confetti-gif-left" class="confetti-gif">
+        </div>
         
         <section class="input-section">
             <h2 class="section-title">Digite o nome dos seus amigos</h2>
@@ -23,19 +28,25 @@
                 <input type="text" id="amigo" class="input-name" placeholder="Digite um nome">
                 <button class="button-add" onclick="adicionarAmigo()">Adicionar</button>
             </div>
-           
-            <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
-            <ul id="resultado" class="result-list" aria-live="polite"></ul>
-
-            <div class="button-container">
-                <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
+            <div class="output-result">
+                <h2>Participantes:</h2>
+                <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
+                <ul id="resultado" class="result-list" aria-live="polite"></ul>
+            </div>
+            <div class="output-container">
+                <button id="botao-sorteio" class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
                     <img src="assets/play_circle_outline.png" alt="Ícone para sortear">
-                    Sortear amigo
+                    <p>Sortear amigo</p>
                 </button>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="repetir-checkbox" onclick="repetirAmigo()" aria-label="Permitir repetição de amigos">
+                    <label for="repetir-checkbox">Repetir amigos?</label>
+                </div>
             </div>
         </section>
     </main>
 
     <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
 </body>
 </html>
