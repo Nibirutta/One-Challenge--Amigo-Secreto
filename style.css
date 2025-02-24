@@ -21,17 +21,49 @@
 
 body {
     height: 100vh;
-    background-image: url("./assets/0000-0944.gif");
+    background-image: url("./assets/Untitled.apng");
     background-color: var(--color-primary);
 }
 
 .main-content {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     height: 100%;
     width: 100%;
+    flex: 1;
+}
+
+/* Confetti Gif */
+.confetti-gif {
+    display: none;
+    animation: fadein 2s;
+}
+
+#confetti-gif-right {
+    position: fixed;
+    top: 40%;
+    left: 0;
+    z-index: 101;
+}
+
+#confetti-gif-left {
+    position: fixed;
+    top: 40%;
+    right: 0;
+    z-index: 101;
+    transform: scale(-1, 1);
+}
+
+@keyframes fadein {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 /* Banner */
@@ -156,6 +188,7 @@ ul {
 
 /* Botão de sortear título */
 .button-draw {
+    position: relative;
     width: 60%;
     max-width: 500px;
     display: flex;

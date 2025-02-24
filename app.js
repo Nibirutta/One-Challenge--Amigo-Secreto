@@ -48,7 +48,7 @@ function sortearAmigo(){
             amigoSorteado = amigos[Math.floor(Math.random() * amigos.length)];
 
             if(amigosSorteados.length == amigos.length){
-                alert("Todos os amigos já foram sorteados!");
+                document.getElementById("resultado").innerHTML = "Todos os amigos já foram sorteados!";
                 return;
             }
         }
@@ -61,6 +61,7 @@ function sortearAmigo(){
         // Atualiza a lista de amigos e exibe o amigo sorteado
         document.getElementById("resultado").innerHTML = amigoSorteado + " é o seu amigo secreto!";
         atualizarListaAmigos();
+        dispararConfete();
     }
 }
 
@@ -72,4 +73,35 @@ function repetirAmigo(){
     }
 
     atualizarListaAmigos();
+}
+
+async function dispararConfete(){
+    Array.from(document.getElementsByClassName("confetti-gif")).forEach(element => {
+        element.src = "assets/confettieffectnoloop.gif";
+        element.style.display = "block";
+    })
+
+    await esperar(600);
+    confetti({
+        particleCount: 200,
+        angle: 140,
+        spread: 70,
+        origin: { x: 1 }
+    });
+    confetti({
+        particleCount: 200,
+        angle: 40,
+        spread: 70,
+        origin: { x: 0 }
+    });
+
+    await esperar(1000);
+    Array.from(document.getElementsByClassName("confetti-gif")).forEach(element => {
+        element.style.display = "none";
+        element.src = "";
+    })
+}
+
+function esperar(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
 }

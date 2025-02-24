@@ -16,6 +16,11 @@
             <h1 class="main-title">Dê a melhor surpresa para o seu amigo secreto!</h1>
             <img src="assets/logo-jogo-secreto.png" alt="Imagem representativa de amigo secreto">
         </header>
+
+        <div>
+            <img src="assets/confettieffectnoloop.gif" alt="confetti gif" id="confetti-gif-right" class="confetti-gif">
+            <img src="assets/confettieffectnoloop.gif" alt="confetti gif" id="confetti-gif-left" class="confetti-gif">
+        </div>
         
         <section class="input-section">
             <h2 class="section-title">Digite o nome dos seus amigos</h2>
@@ -29,7 +34,7 @@
                 <ul id="resultado" class="result-list" aria-live="polite"></ul>
             </div>
             <div class="output-container">
-                <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
+                <button id="botao-sorteio" class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
                     <img src="assets/play_circle_outline.png" alt="Ícone para sortear">
                     <p>Sortear amigo</p>
                 </button>
@@ -42,5 +47,6 @@
     </main>
 
     <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
 </body>
 </html>
