@@ -22,6 +22,7 @@ function atualizarListaAmigos(){
     let lista = document.getElementById("listaAmigos");
     lista.innerHTML = "";
     
+    // Adiciona os amigos na lista
     for(let i = 0; i < amigos.length; i++){
         let item = document.createElement("li");
 
@@ -65,6 +66,7 @@ function sortearAmigo(){
     }
 }
 
+// Função para repetir o sorteio de amigo secreto
 function repetirAmigo(){
     if(checkboxRepetir == false){
         checkboxRepetir = true;
@@ -75,12 +77,15 @@ function repetirAmigo(){
     atualizarListaAmigos();
 }
 
+// Função para disparar o efeito de confete
 async function dispararConfete(){
+    // Exibe o gif de confete
     Array.from(document.getElementsByClassName("confetti-gif")).forEach(element => {
         element.src = "assets/confettieffectnoloop.gif";
         element.style.display = "block";
     })
 
+    // Aguardar um determinado tempo antes de disparar o efeito
     await esperar(600);
     confetti({
         particleCount: 200,
@@ -95,6 +100,7 @@ async function dispararConfete(){
         origin: { x: 0 }
     });
 
+    // Aguardar um determinado tempo antes de remover o gif de confete
     await esperar(1000);
     Array.from(document.getElementsByClassName("confetti-gif")).forEach(element => {
         element.style.display = "none";
@@ -102,6 +108,7 @@ async function dispararConfete(){
     })
 }
 
+// Função para aguardar um determinado tempo
 function esperar(ms){
     return new Promise(resolve => setTimeout(resolve, ms));
 }

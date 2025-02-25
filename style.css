@@ -21,7 +21,8 @@
 
 body {
     height: 100vh;
-    background-image: url("./assets/Untitled.apng");
+    background-image: url("./assets/PresentBoxHD.gif");
+    background-size: cover;
     background-color: var(--color-primary);
 }
 
